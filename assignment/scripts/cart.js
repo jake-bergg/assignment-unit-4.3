@@ -4,16 +4,6 @@ console.log('***** Cart Functions *****');
 let basket = [];
 const maxItems = 5;
 
-addItem('Thing 1');
-addItem('Thing 2');
-addItem('Thing 3');
-addItem('Thing 4');
-addItem('Thing 5');
-addItem('Thing 6');
-
-listItems();
-
-empty();
 
 function addItem(item) {
     console.log('in addItem');
@@ -49,9 +39,29 @@ function listItems() {
     }
 }
 
+function removeItem(item) {
+    const index = basket.indexOf(item);
+    if (index !== -1) {
+        return basket.splice(index, 1)[0];
+    }
+    else {
+        return null;
+    }
+}
 
 
+addItem('Thing 1');
+addItem('Thing 2');
+addItem('Thing 3');
+addItem('Thing 4');
+addItem('Thing 5');
+addItem('Thing 6');
 
+listItems();
+
+removeItem('Thing 1');
+
+empty();
 
 
 
