@@ -4,12 +4,26 @@ console.log('***** Cart Functions *****');
 let basket = [];
 const maxItems = 5;
 
+addItem('Thing 1');
+addItem('Thing 2');
+addItem('Thing 3');
+addItem('Thing 4');
+addItem('Thing 5');
+addItem('Thing 6');
+
+listItems();
+
+empty();
 
 function addItem(item) {
     console.log('in addItem');
-    basket.push(item);
-    console.log(basket);
-    return true;
+    if (isFull()) {
+        return false;
+    }
+    else {
+        basket.push(item);
+        return true;
+    }
 }
 
 function empty() {
@@ -34,14 +48,6 @@ function listItems() {
         console.log(item);
     }
 }
-
-addItem('Thing 1');
-addItem('Thing 2');
-addItem('Thing 3');
-
-listItems();
-
-empty();
 
 
 
