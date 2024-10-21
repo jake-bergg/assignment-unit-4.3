@@ -7,6 +7,7 @@ const maxItems = 5;
 
 function addItem(item) {
     console.log('in addItem');
+    console.log(basket);
     if (isFull()) {
         return false;
     }
@@ -60,6 +61,8 @@ addItem('Thing 6');
 listItems();
 
 removeItem('Thing 1');
+
+console.log(basket);
 
 empty();
 
