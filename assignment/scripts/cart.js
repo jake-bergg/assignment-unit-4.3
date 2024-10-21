@@ -32,13 +32,12 @@ function listItems() {
     console.log('in listItems');
     for (let item of basket){
         console.log(item);
-    };
+    }
 }
 
 addItem('Thing 1');
 addItem('Thing 2');
 addItem('Thing 3');
-
 
 listItems();
 
